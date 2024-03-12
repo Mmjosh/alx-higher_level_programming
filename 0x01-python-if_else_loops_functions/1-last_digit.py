@@ -4,13 +4,15 @@ number = random.randint(-10000, 10000)
 on = number
 
 if number < 0:
-    number *= -1
-
+    sign = -1
+else:
+    sign = 1
+number = abs(number)
 ld = number % 10
 
-if ld > 5:
-    print(f"Last digit of {on} is {number % 10} and is greater than 5")
-elif ld == 0:
-    print(f"Last digit of {on} is {number % 10} and is zero")
-elif ld < 6 and ld != 0:
-    print(f"Last digit of {on} is {number % 10} and is less than 6 and not 0")
+if sign * ld > 5:
+    print(f"Last digit of {on} is {sign * ld} and is greater than 5")
+elif sign * ld == 0:
+    print(f"Last digit of {on} is {sign * ld} and is zero")
+elif sign * ld < 6 and ld != 0:
+    print(f"Last digit of {on} is {sign * ld} and is less than 6 and not 0")
