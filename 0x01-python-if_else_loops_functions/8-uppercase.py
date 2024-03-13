@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def uppercase(str):
     if not str:
-        raise ValueError("Input string cannot be empty")
+        return
     str1 = ''
     for c in str:
         if 'a' <= c <= 'z':
