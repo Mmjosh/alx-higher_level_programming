@@ -1,0 +1,20 @@
+Testing `print_square` function
+===============================
+
+    >>> print_square = __import__('4-print_square').print_square
+
+using the function:
+
+    >>> print_square(0)
+    >>> print_square(float('inf'))
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+    >>> print_square(-12)
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be >= 0
+    >>> print_square(-9.7)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
