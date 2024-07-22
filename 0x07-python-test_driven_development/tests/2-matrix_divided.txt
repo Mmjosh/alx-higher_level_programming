@@ -1,0 +1,59 @@
+Testing `matrix_divided` function
+=================================
+
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+using the function:
+
+    >>> matrix = []
+    >>> matrix_divided(matrix, 3)
+    []
+    >>> matrix = [[1, 2, 3], "fork"]
+    >>> try:
+    ...     matrix_divided(matrix, 3)
+    ... except Exception as e:
+    ...     print(e)
+    matrix must be a matrix (list of lists) of integers/floats
+    >>> matrix = [[1, 'f', 5], [23, 40, 13]]
+    >>> try:
+    ...     matrix_divided(matrix, 3)
+    ... except Exception as e:
+    ...     print(e)
+    matrix must be a matrix (list of lists) of integers/floats
+    >>> matrix = [[13, 17], [2, 5, 7, 8]]
+    >>> try:
+    ...     matrix_divided(matrix, 3)
+    ... except Exception as e:
+    ...     print(e)
+    Each row of the matrix must have the same size
+    >>> matrix = [[12, 14, 16], [10, 20, 30]]
+    >>> try:
+    ...     matrix_divided(matrix, 't')
+    ... except Exception as e:
+    ...     print(e)
+    div must be a number
+    >>> try:
+    ...     matrix_divided(matrix, 0)
+    ... except Exception as e:
+    ...     print(e)
+    division by zero
+    >>> try:
+    ...     matrix_divided(matrix)
+    ... except Exception as e:
+    ...     print(e)
+    matrix_divided() missing 1 required positional argument: 'div'
+    >>> matrix = "Joshua"
+    >>> try:
+    ...     matrix_divided(matrix, 5)
+    ... except Exception as e:
+    ...     print(e)
+    matrix must be a matrix (list of lists) of integers/floats
+    >>> matrix =[[12, 17], [31, 57]]
+    >>> matrix_divided(matrix, -5)
+    [[-2.4, -3.4], [-6.2, -11.4]]
+    >>> matrix_divided()
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+    >>> matrix_divided(matrix, float('inf'))
+    [[0.0, 0.0], [0.0, 0.0]]
