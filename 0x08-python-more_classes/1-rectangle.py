@@ -9,7 +9,7 @@ class Rectangle:
     """
     A class used to represent a rectangle
     """
-    def __init__(self, width = 0, height = 0):
+    def __init__(self, width=0, height=0):
         """initalizes `Rectangle`"""
         self.width = width
         self.height = height
